@@ -319,8 +319,8 @@ protected void onActivityResult(int requestCode, int resultCode, Intent intent) 
 
 ```java
 @Override
-protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-    super.onActivityResult(requestCode, resultCode, intent);
+protected void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     AplazameSDK.onRequestPermissionsResult(this, requestCode, grantResults);
 }
 ```
