@@ -329,7 +329,7 @@ License
 -------
 
 Aplazame is Copyright (c) 2018 Aplazame, inc. It is free software, and may be
-redistributed under the terms specified in the [LICENSE](/LICENSE.txt) file.
+redistributed under the terms specified in the [LICENSE](LICENSE) file.
 
 About
 -----
