@@ -71,6 +71,7 @@ public class AplazameSDK {
         webSettings.setAllowFileAccess(true);
         webSettings.setJavaScriptEnabled(true);
 
+        // from: https://code.i-harness.com/en/q/17337dc
         act.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
         if (Build.VERSION.SDK_INT >= 21){
