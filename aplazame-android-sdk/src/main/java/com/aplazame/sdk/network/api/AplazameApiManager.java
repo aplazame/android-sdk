@@ -1,7 +1,6 @@
 package com.aplazame.sdk.network.api;
 
 import com.aplazame.sdk.BuildConfig;
-import com.aplazame.sdk.model.Checkout;
 import com.aplazame.sdk.network.authenticator.AuthInterceptor;
 import com.aplazame.sdk.network.model.CheckoutAvailabilityDto;
 import com.aplazame.sdk.network.response.AvailabilityCallback;
@@ -9,9 +8,7 @@ import com.aplazame.sdk.network.rest.CheckoutService;
 import com.aplazame.sdk.network.utils.MapperUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,7 +30,7 @@ public class AplazameApiManager {
     private static final String ANDROID_JS_INTERFACE_NAME = "AplazameAndroidSDK";
 
     private static final String POST_MESSAGE_CHECKOUT_DATA =
-            "window.postMessage({aplazame: 'checkout', event: 'checkout-data', data: %s}, '*');";
+            "window.postMessage({aplazame: 'checkout', event: 'checkout-data', data: '%s'}, '*');";
 
     private static final String EVENT_LISTENER =
             "window.addEventListener('message', function (e) {\n" +
@@ -92,15 +89,8 @@ public class AplazameApiManager {
         });
     }
 
-    public String requestCheckout(Checkout checkout) {
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
-
-        Type type = new TypeToken<Checkout>(){}.getType();
-        String json = gson.toJson(checkout, type);
-
-        return String.format(POST_MESSAGE_CHECKOUT_DATA, json);
+    public String requestCheckout(String data) {
+        return String.format(POST_MESSAGE_CHECKOUT_DATA, data);
     }
 
     public String initializeCheckoutUrl() {
