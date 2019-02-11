@@ -1,5 +1,6 @@
 package com.aplazame.sdk.network.api;
 
+import com.aplazame.sdk.BuildConfig;
 import com.aplazame.sdk.model.Checkout;
 import com.aplazame.sdk.network.authenticator.AuthInterceptor;
 import com.aplazame.sdk.network.model.CheckoutAvailabilityDto;
@@ -28,13 +29,11 @@ public class AplazameApiManager {
     private Boolean debug;
     private static final String BASE_URL = "https://api.aplazame.com/";
     private static final String INITIALIZE_CHECKOUT_URL =
-            "https://checkout.aplazame.com/?public-key=%1$s%2$s&post-message=true&os=android&webview=true";
+            "https://checkout.aplazame.com/?public-key=%1$s&post-message=true&platform-name=android&platform-version=%2$s&module-name=aplazame&module-version=%3$s&sandbox=%4$s";
     private static final String ANDROID_JS_INTERFACE_NAME = "AplazameAndroidSDK";
 
     private static final String POST_MESSAGE_CHECKOUT_DATA =
             "window.postMessage({aplazame: 'checkout', event: 'checkout-data', data: %s}, '*');";
-
-    private static final String SANDBOX_ENABLED_PARAM = "&sandbox=true";
 
     private static final String EVENT_LISTENER =
             "window.addEventListener('message', function (e) {\n" +
@@ -105,7 +104,14 @@ public class AplazameApiManager {
     }
 
     public String initializeCheckoutUrl() {
-        return String.format(INITIALIZE_CHECKOUT_URL, token, debug ? SANDBOX_ENABLED_PARAM : "");
+        String moduleVersion = BuildConfig.VERSION_NAME;
+
+        return String.format(
+                INITIALIZE_CHECKOUT_URL,
+                token,
+                android.os.Build.VERSION.SDK_INT,
+                moduleVersion,
+                debug ? "true" : "false");
     }
 
     public String addEventListener() {
