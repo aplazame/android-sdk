@@ -21,255 +21,12 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/article1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/top">
-
-        <ImageView
-            android:id="@+id/image_article1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
-
-        <TextView
-            android:id="@+id/description_article1"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_toEndOf="@+id/image_article1"
-            android:text="@string/description_article1"
-            android:layout_marginEnd="10dp"
-            android:gravity="center_vertical"
-            android:ellipsize="end"
-            android:textColor="#000000"
-            android:maxLines="1"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_below="@+id/description_article1"
-            android:layout_toEndOf="@+id/image_article1"
-            android:layout_alignParentEnd="true"
-            android:gravity="end"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/quantity_article1"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="2 x "
-                android:textColor="#000000"
-                android:gravity="center_vertical" />
-            <TextView
-                android:id="@+id/price_article1"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:gravity="center_vertical"
-                android:text="$39.93"
-                android:textColor="#9F9F9F"
-                android:layout_marginEnd="10dp"/>
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/article2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/article1">
-
-        <ImageView
-            android:id="@+id/image_article2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
-
-        <TextView
-            android:id="@+id/description_article2"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_toEndOf="@+id/image_article2"
-            android:text="@string/description_article2"
-            android:layout_marginEnd="10dp"
-            android:gravity="center_vertical"
-            android:ellipsize="end"
-            android:textColor="#000000"
-            android:maxLines="1"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_below="@+id/description_article2"
-            android:layout_toEndOf="@+id/image_article2"
-            android:layout_alignParentEnd="true"
-            android:gravity="end"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/quantity_article2"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="1 x "
-                android:textColor="#000000"
-                android:gravity="center_vertical" />
-            <TextView
-                android:id="@+id/price_article2"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:gravity="center_vertical"
-                android:text="$35.09"
-                android:textColor="#9F9F9F"
-                android:layout_marginEnd="10dp"/>
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/article3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@+id/article2">
-
-        <ImageView
-            android:id="@+id/image_article3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
-
-        <TextView
-            android:id="@+id/description_article3"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_toEndOf="@+id/image_article3"
-            android:text="@string/description_article3"
-            android:layout_marginEnd="10dp"
-            android:gravity="center_vertical"
-            android:ellipsize="end"
-            android:textColor="#000000"
-            android:maxLines="1"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_below="@+id/description_article3"
-            android:layout_toEndOf="@+id/image_article3"
-            android:layout_alignParentEnd="true"
-            android:gravity="end"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/quantity_article3"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="1 x "
-                android:textColor="#000000"
-                android:gravity="center_vertical" />
-            <TextView
-                android:id="@+id/price_article3"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:gravity="center_vertical"
-                android:text="$15.73"
-                android:textColor="#9F9F9F"
-                android:layout_marginEnd="10dp"/>
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/discount"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/article3">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="@string/discount"
-            android:textColor="#000000"
-            android:gravity="center_vertical" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:text="-$3.62"
-            android:textColor="#9F9F9F"
-            android:gravity="center_vertical|end"
-            android:layout_gravity="end"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/shipping"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/discount">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="@string/shipping"
-            android:textColor="#000000"
-            android:gravity="center_vertical" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:text="$5.00"
-            android:textColor="#9F9F9F"
-            android:gravity="center_vertical|end"
-            android:layout_gravity="end"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="vertical"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="end"
-        android:layout_below="@+id/shipping">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="@string/total"
-            android:textColor="#000000"
-            android:gravity="center_vertical" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:text="$132.06"
-            android:textColor="#9F9F9F"
-            android:gravity="center_vertical|end"
-            android:layout_gravity="end"/>
-    </LinearLayout>
-
-    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <LinearLayout
-            android:id="@+id/check_token"
+            android:id="@+id/amount_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -281,7 +38,62 @@
                 android:textColor="#000000"
                 android:layout_marginEnd="6dp"
                 android:gravity="center_vertical"
-                android:text="@string/access_token" />
+                android:text="@string/amount__label" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:inputType="numberDecimal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:minLines="2"
+                android:maxLines="2"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/currency_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amount_form"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginEnd="6dp"
+                android:gravity="center_vertical"
+                android:text="@string/currency__label" />
+
+            <EditText
+                android:id="@+id/currency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:minLines="2"
+                android:maxLines="2"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/access_token__form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currency_form"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginEnd="6dp"
+                android:gravity="center_vertical"
+                android:text="@string/access_token__label" />
 
             <EditText
                 android:id="@+id/access_token"
@@ -302,11 +114,41 @@
                 android:gravity="center_vertical"
                 android:text="@string/check"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checkout_id__form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/access_token__form"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/checkout_id__form"
+                android:layout_marginEnd="6dp"
+                android:gravity="center_vertical"
+                android:text="@string/checkout_id__label"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/checkout_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:minLines="2"
+                android:maxLines="2"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
         <RelativeLayout
             android:id="@+id/go_checkout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/check_token"
+            android:layout_below="@+id/checkout_id__form"
             android:background="#267BBD">
 
             <ImageView

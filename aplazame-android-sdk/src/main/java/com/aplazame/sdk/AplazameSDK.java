@@ -20,7 +20,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-import com.aplazame.sdk.model.Checkout;
 import com.aplazame.sdk.network.api.AplazameApiManager;
 import com.aplazame.sdk.network.js_interface.JsInterface;
 import com.aplazame.sdk.network.js_interface.JsWebViewEvents;
@@ -36,7 +35,7 @@ public class AplazameSDK {
 
     private static AplazameApiManager aplazameApiManager;
     // To avoid using parcelables
-    private static Checkout checkout;
+    private static String checkout_id;
 
     private static String imagePath;
     private static ValueCallback<Uri> uriCallback;
@@ -87,7 +86,7 @@ public class AplazameSDK {
                 webView.post(new Runnable() {
                     @Override
                     public void run() {
-                        webView.evaluateJavascript(aplazameApiManager.requestCheckout(checkout), null);
+                        webView.evaluateJavascript(aplazameApiManager.requestCheckout(checkout_id), null);
                     }
                 });
             }
@@ -104,7 +103,7 @@ public class AplazameSDK {
             @Override
             public void onPageFinished(WebView view, String url) {
                 events.onPageFinished();
-                webView.evaluateJavascript(aplazameApiManager.requestCheckout(checkout), null);
+                webView.evaluateJavascript(aplazameApiManager.requestCheckout(checkout_id), null);
                 webView.evaluateJavascript(aplazameApiManager.addEventListener(), null);
             }
         });
@@ -228,8 +227,8 @@ public class AplazameSDK {
         }
     }
 
-    public static void setCheckout(Checkout checkout) {
-        AplazameSDK.checkout = checkout;
+    public static void setCheckout(String checkout_id) {
+        AplazameSDK.checkout_id = checkout_id;
     }
 
     private static void checkAplazameSdkConfiguration() {
@@ -239,7 +238,7 @@ public class AplazameSDK {
     }
 
     private static void checkCheckout() {
-        if (checkout == null) {
+        if (checkout_id == null) {
             throw new IllegalStateException("You must set the checkout first");
         }
     }

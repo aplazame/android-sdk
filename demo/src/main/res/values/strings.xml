@@ -1,15 +1,14 @@
 <resources>
     <string name="app_name">demo</string>
 
-    <string name="description_article1">RELOJ EN ORO BLANCO DE 18 QUILATES Y DIAMANTES</string>
-    <string name="description_article2">Nº5 EAU PREMIERE SPRAY</string>
-    <string name="description_article3">ILLUSION D\'HOMBRE</string>
-    <string name="discount">Discount</string>
-    <string name="shipping">Shipping</string>
-    <string name="total">Total</string>
-    <string name="access_token">Access Token:</string>
-    <string name="check">Comprobar</string>
+    <string name="amount__label">Amount:</string>
+    <string name="currency__label">Currency:</string>
 
-    <string name="aplazame_unavailable_token">Aplazame no está disponible</string>
-    <string name="aplazame_unavailable_error">Se ha producido un error</string>
+    <string name="access_token__label">Public Key:</string>
+    <string name="check">Check</string>
+
+    <string name="checkout_id__label">Checkout ID:</string>
+
+    <string name="aplazame_unavailable_token">Aplazame is not currently available</string>
+    <string name="aplazame_unavailable_error">An error has occurred</string>
 </resources>

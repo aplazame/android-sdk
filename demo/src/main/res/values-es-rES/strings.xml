@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">demo</string>
+    <string name="amount__label">Importe:</string>
+    <string name="currency__label">Moneda:</string>
+    <string name="access_token__label">Public Key:</string>
+    <string name="check">Comprobar</string>
+    <string name="checkout_id__label">Checkout ID</string>
+    <string name="aplazame_unavailable_token">Aplazame no está disponible</string>
+    <string name="aplazame_unavailable_error">Se ha producido un error</string>
+</resources>
