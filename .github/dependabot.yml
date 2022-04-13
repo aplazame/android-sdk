@@ -16,4 +16,5 @@ updates:
   labels:
     - dependabot
   reviewers:
-    - "aplazame/squad_app-mobile/reviewers"
+    - "aplazame/squad_app-mobile-reviewers"
+    - "aplazame/squad_plugins-reviewers"
