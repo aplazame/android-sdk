@@ -231,6 +231,10 @@ public class AplazameSDK {
         AplazameSDK.checkout_id = checkout_id;
     }
 
+    public static String getCheckoutId() {
+        return AplazameSDK.checkout_id;
+    }
+
     private static void checkAplazameSdkConfiguration() {
         if (aplazameApiManager == null) {
             activity.finish();
