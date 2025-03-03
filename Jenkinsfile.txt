@@ -3,7 +3,7 @@ library "aplazame-shared-library"
 pipeline {
   agent {
     kubernetes {
-      yamlFile "/php.yaml"
+      yamlFile "/jenkins/php.yaml"
     }
   }
   environment {
@@ -24,12 +24,12 @@ pipeline {
       }
       agent {
         kubernetes {
-          yamlFile "/jenkins-sonar.yaml"
+          yamlFile "/jenkins/jenkins-sonar.yaml"
         }
       }
       environment {
         SONAR_TEST = credentials('SONAR_TEST')
-        CODE_SOURCE_DEFAULT = "src"
+        CODE_SOURCE_DEFAULT = "aplazame-android-sdk"
       }
       steps {
         scmSkip()
