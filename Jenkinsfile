@@ -15,11 +15,6 @@ pipeline {
     ansiColor('xterm')
   }
   stages {
-    stage('Build') {
-    steps {
-        sh './gradlew build'
-    }
-}
     stage('Test Sonarqube') {
       when {
         not {
